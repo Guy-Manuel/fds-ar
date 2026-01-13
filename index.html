@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>FDS AR</title>
+
+  <!-- A-Frame -->
+  <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+
+  <!-- AR.js (FIXED CDN) -->
+  <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js@3.3.2/aframe/build/aframe-ar.js"></script>
+</head>
+
+<body style="margin: 0; overflow: hidden;">
+
+  <a-scene
+    embedded
+    arjs="sourceType: webcam; detectionMode: mono; debugUIEnabled: false;"
+    vr-mode-ui="enabled: false">
+
+    <a-marker preset="hiro">
+      <a-text
+        value="Groep 1"
+        position="0 0 0.05"
+        rotation="-90 0 0"
+        scale="0.6 0.6 0.6"
+        color="red">
+      </a-text>
+    </a-marker>
+
+    <a-entity camera></a-entity>
+
+  </a-scene>
+</body>
+</html>
